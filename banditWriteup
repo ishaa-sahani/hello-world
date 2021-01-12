@@ -1,0 +1,26 @@
+Bandit writeup
+
+Level 0
+Commands used: ls, cat
+
+Level 1
+Commands used: ls, cat
+If a filename begins with a dash (-), '<' is used before its name.
+For example, if the filename is -file01, the command would be cat <-file01.
+
+Level 2
+Commands used: ls, cat
+If a filename has spaces, the entire filename in the commands has to be written inside double quotations.
+For example, ls "filename with spaces"
+
+Level 3
+Commands used: ls, cat, cd, ls -a
+ls -a command shows us thr hidden files also.
+
+Level 4
+Commands used: file
+We can use a loop to check for each file and find the password. The command would be: for in x {0..9}; do ./-file0$x; done
+Or, if we want to check for each file individually, we can use the command: file ./-file01
+
+Level 5:
+This level has a lot of folders. If we start opening them using cat, we get a huge chunk of garbage. 
